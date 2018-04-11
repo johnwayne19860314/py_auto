@@ -1,0 +1,17 @@
+2017-07-14 13:40:16,286 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-17 10:46:21,081 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-17 10:46:21,085 LogManager.py[line:31] DEBUG 进入询价页面失败
+2017-07-17 10:47:23,964 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-17 11:04:46,890 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-17 11:04:46,894 LogManager.py[line:31] DEBUG 进入询价页面失败
+2017-07-17 11:05:49,808 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-17 11:18:38,637 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-17 11:18:59,230 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-17 11:19:07,592 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-17 11:19:09,628 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-17 11:19:35,608 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-17 11:19:56,159 LogManager.py[line:31] DEBUG Message: 
+

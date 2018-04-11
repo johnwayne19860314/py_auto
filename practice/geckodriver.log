@@ -1,0 +1,50 @@
+1498120730363	geckodriver	INFO	Listening on 127.0.0.1:58967
+1498120732472	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498120746472	Marionette	INFO	Listening on port 58973
+1498120756863	Marionette	INFO	New connections will no longer be accepted
+1498120808740	geckodriver	INFO	Listening on 127.0.0.1:59094
+1498120810779	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498120815780	Marionette	INFO	Listening on port 59100
+1498120883231	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1498120883568	Marionette	INFO	Ceased listening
+1498121928358	geckodriver	INFO	Listening on 127.0.0.1:59791
+1498121930394	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498121935060	Marionette	INFO	Listening on port 59797
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1498124350342	Marionette	INFO	Ceased listening
+r	INFO	Listening on 127.0.0.1:60642
+1498123567019	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498123572629	Marionette	INFO	Listening on port 60648
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+***************************1498124348814	Marionette	INFO	Ceased listening
+ a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1498124347683	Marionette	INFO	Ceased listening
+1498124377972	geckodriver	INFO	Listening on 127.0.0.1:61137
+1498124380009	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498124386609	Marionette	INFO	Listening on port 61143
+1498124422560	Marionette	INFO	Ceased listening
+1498124424281	geckodriver	INFO	Listening on 127.0.0.1:61197
+1498124426318	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498124431795	Marionette	INFO	Listening on port 61203
+1498124518185	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1498124854200	Marionette	INFO	Ceased listening
+1498127293386	geckodriver	INFO	Listening on 127.0.0.1:62730
+1498127295437	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1498127300150	Marionette	INFO	Listening on port 62736
+1500614996806	geckodriver	INFO	Listening on 127.0.0.1:53170
+1500614998915	geckodriver::marionette	INFO	Starting browser D:\Tools\FireFox\firefox.exe with args ["-marionette"]
+1500615010727	Marionette	INFO	Listening on port 53177
+1500615011240	Marionette	WARN	TLS certificate errors will be ignored for this session

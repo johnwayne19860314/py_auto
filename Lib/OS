@@ -1,0 +1,65 @@
+os模块
+
+os模块的作用：
+
+　　os，语义为操作系统，所以肯定就是操作系统相关的功能了，可以处理文件和目录这些我们日常手动需要做的操作，就比如说：显示当前目录下所有文件/删除某个文件/获取文件大小……
+
+　　另外，os模块不受平台限制，也就是说：当我们要在linux中显示当前命令时就要用到pwd命令，而Windows中cmd命令行下就要用到这个，额...我擦，我还真不知道，（甭管怎么着，肯定不是pwd），这时候我们使用python中os模块的os.path.abspath(name)功能，甭管是linux或者Windows都可以获取当前的绝对路径。
+
+os模块的常用功能：
+
+1  os.name      #显示当前使用的平台
+View Code
+
+2  os.getcwd()      #显示当前python脚本工作路径
+View Code
+
+3  os.listdir('dirname')        #返回指定目录下的所有文件和目录名
+View Code
+
+4  os.remove('filename')       #删除一个文件
+View Code
+
+5  os.makedirs('dirname/dirname')     #可生成多层递规目录
+View Code
+
+6  os.rmdir('dirname')     #删除单级目录
+View Code
+
+7  os.rename("oldname","newname")    #重命名文件
+View Code
+
+8  os.system()    #运行shell命令,注意：这里是打开一个新的shell，运行命令，当命令结束后，关闭shell
+View Code
+
+9  os.sep    #显示当前平台下路径分隔符
+View Code
+
+10  os.linesep    #给出当前平台使用的行终止符
+View Code
+
+11  os.environ    #获取系统环境变量
+View Code
+
+12  os.path.abspath(path)    #显示当前绝对路径
+View Code
+
+13  os.path.dirname(path)    #返回该路径的父目录
+View Code
+
+14  os.path.basename(path)    #返回该路径的最后一个目录或者文件,如果path以／或\结尾，那么就会返回空值。
+View Code
+
+15  os.path.isfile(path)     #如果path是一个文件，则返回True
+View Code
+
+16  os.path.isdir(path)    #如果path是一个目录，则返回True
+View Code
+
+17  os.stat()    #获取文件或者目录信息
+View Code
+
+18  os.path.split(path)  #将path分割成路径名和文件名。（事实上，如果你完全使用目录，它也会将最后一个目录作为文件名而分离，同时它不会判断文件或目录是否存在）
+View Code
+
+19  os.path.join(path,name)   #连接目录与文件名或目录 结果为path/name

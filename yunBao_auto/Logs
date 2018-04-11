@@ -1,0 +1,1105 @@
+2017-08-02 10:26:16,987 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:18,990 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:19,490 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:19,990 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:23,992 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-02 10:26:24,157 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:24,157 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:26,158 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:28,160 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,160 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,160 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,161 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,161 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,161 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:26:28,161 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:26:48,438 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-02 10:26:48,447 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:10,759 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-02 10:27:10,819 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:27:10,819 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:12,819 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:14,821 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:16,821 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:18,822 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:20,822 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:22,822 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:24,822 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:24,822 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:27:24,822 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:28,825 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:27:28,825 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-02 10:27:31,825 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:31:25,661 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:31:25,661 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:31:47,928 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:31:47,928 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:32:08,815 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:32:08,815 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:32:29,697 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:32:29,697 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:32:53,782 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:32:53,782 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-02 10:33:14,075 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:33:14,075 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:33:34,374 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:33:34,374 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:33:56,644 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:33:56,644 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:34:18,910 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:34:18,911 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:34:39,154 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:34:39,154 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:34:59,403 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:34:59,404 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:35:19,657 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:35:19,657 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:35:39,910 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:35:39,910 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:36:00,154 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:36:00,154 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:36:20,437 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:36:20,438 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:36:40,653 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-02 10:37:00,997 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:37:00,999 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:37:23,336 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-02 10:37:43,803 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:37:43,803 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:38:04,098 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:38:04,098 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:38:26,388 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:38:26,388 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:38:48,684 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:38:48,684 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:39:10,946 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:39:10,946 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:39:33,204 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:39:33,204 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:39:55,457 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:39:55,457 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:40:17,711 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:40:17,711 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:40:39,956 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:40:39,956 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:41:00,211 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:41:00,213 LogManager.py[line:34] DEBUG 输入有误
+2017-08-02 10:41:20,463 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:41:20,464 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:41:44,710 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:41:44,710 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:42:04,947 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:42:04,947 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-02 10:42:28,184 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-02 10:42:28,184 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-02 10:42:48,451 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:29:04,732 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:29:04,732 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 15:29:25,421 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:29:25,423 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:29:45,832 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:29:45,832 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:30:08,401 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:30:08,401 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:30:10,558 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,565 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,572 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,579 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,586 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,592 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 15:30:10,599 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:30:10,604 LogManager.py[line:34] DEBUG WebDriver，error Message: Tried to run command without establishing a connection
+
+2017-08-15 15:30:10,730 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:34:43,244 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:34:43,246 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 15:35:03,953 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:35:03,954 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:35:10,687 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:35:12,693 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 15:38:54,056 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:38:54,056 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 15:39:14,736 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 15:39:14,737 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:07:59,923 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:07:59,924 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 16:08:20,624 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:08:20,625 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:08:41,180 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:08:41,180 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:26:36,536 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:26:36,536 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:26:58,786 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:26:58,786 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:27:19,539 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:27:19,539 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:27:40,401 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:27:40,401 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:28:04,687 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:28:04,687 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 16:28:24,940 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:28:24,940 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:29:57,303 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:29:57,305 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 16:44:02,765 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:44:02,765 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 16:44:23,494 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:44:23,494 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:44:44,015 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:44:44,015 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:45:06,572 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:45:06,573 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:45:29,022 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:45:29,023 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:45:49,460 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:45:49,460 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:46:09,989 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:46:09,989 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:50:19,411 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:50:19,411 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 16:50:40,128 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:50:40,128 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:51:00,793 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:51:00,793 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:51:23,101 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:51:23,101 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:51:45,625 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:51:45,627 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:06,075 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 16:52:06,075 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:24,286 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:24,292 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:24,299 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:24,306 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 16:52:24,315 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 16:52:24,319 LogManager.py[line:34] DEBUG WebDriver，error Message: Tried to run command without establishing a connection
+
+2017-08-15 16:52:24,328 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:45:36,461 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:45:36,461 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 17:45:57,131 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:45:57,131 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:46:17,698 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:46:17,700 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:46:40,259 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:46:40,260 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:47:02,729 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:47:02,730 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:47:23,253 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:47:23,253 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:47:43,838 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:47:43,838 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:48:04,529 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:48:04,529 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:48:25,052 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:48:25,052 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:48:45,730 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:48:45,730 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:49:06,441 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:49:06,441 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:49:26,742 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 17:49:47,447 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:49:47,447 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:50:13,453 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 17:50:34,257 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:50:34,257 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:50:54,867 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:50:54,867 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:51:18,266 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:51:18,266 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:51:40,946 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:51:40,946 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:52:03,517 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:52:03,517 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:52:25,801 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:52:25,801 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:52:48,407 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:52:48,407 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:53:10,898 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:53:10,900 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:53:33,569 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:53:33,569 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:53:54,229 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:53:54,229 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 17:54:14,665 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:54:14,665 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:54:39,276 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:54:39,276 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:54:59,871 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:54:59,872 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-15 17:55:23,430 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 17:55:23,431 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 17:55:43,963 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:05:44,994 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:05:44,996 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 18:06:05,730 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:06:05,730 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:06:26,211 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:06:26,211 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:06:48,750 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:06:48,750 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:07:11,411 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:07:11,411 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:07:31,951 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:07:31,951 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:07:52,404 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:07:52,404 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:08:12,857 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:08:12,857 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:08:33,342 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:08:33,344 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:08:53,789 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:08:53,789 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:09:14,292 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:09:14,292 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:09:34,563 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 18:09:56,362 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:09:56,362 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:21,911 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 18:10:37,032 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:10:37,039 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:39,046 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:41,053 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:43,059 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:45,066 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:47,072 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:49,082 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:51,091 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:51,098 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:10:51,107 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:55,114 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:10:55,119 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-15 18:10:58,125 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:11:23,046 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:11:23,046 LogManager.py[line:34] DEBUG 登陆失败
+2017-08-15 18:11:43,703 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:11:43,703 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:12:04,191 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:12:04,191 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:12:26,816 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:12:26,818 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:12:49,331 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:12:49,332 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:13:09,828 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:13:09,828 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:13:30,319 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:13:30,321 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:13:50,855 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:13:50,855 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:14:11,341 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:14:11,342 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:14:31,801 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:14:31,801 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:14:52,338 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:14:52,339 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:15:12,584 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 18:15:33,246 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:15:33,247 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:16:05,588 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 18:16:26,365 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:16:26,365 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:16:46,888 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:16:46,888 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:17:09,400 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:17:09,400 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:17:31,898 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:17:31,898 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:17:54,414 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:17:54,414 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:18:16,937 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:18:16,938 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:18:39,476 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:18:39,476 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:19:01,934 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:19:01,934 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:19:24,325 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:19:24,325 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:19:44,576 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:19:44,576 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 18:20:05,196 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:20:05,196 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:20:29,711 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:20:29,711 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:20:50,299 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:20:50,299 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-15 18:21:13,846 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 18:21:13,846 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 18:21:34,403 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:10:28,430 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-08-15 19:10:48,796 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:10:48,798 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 19:11:09,164 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:11:09,164 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:11:31,545 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:11:31,545 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:11:53,854 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:11:53,855 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:12:16,217 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:12:16,219 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:12:38,530 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:12:38,530 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:13:00,832 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:13:00,832 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:13:23,144 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:13:23,144 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:13:45,431 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:13:45,431 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:14:05,720 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:14:05,721 LogManager.py[line:34] DEBUG 输入有误
+2017-08-15 19:14:26,033 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:14:26,033 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:14:50,335 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:14:50,336 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:15:10,625 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:15:10,625 LogManager.py[line:34] DEBUG 确认投保页面错误
+2017-08-15 19:15:33,950 LogManager.py[line:34] DEBUG Message: 
+
+2017-08-15 19:15:33,950 LogManager.py[line:34] DEBUG 获取element失败
+2017-08-15 19:15:54,256 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:04:36,743 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:04:36,795 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:04:59,575 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:04:59,575 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:05:23,177 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:05:23,177 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:05:43,767 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:05:43,767 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 17:06:04,255 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:06:04,255 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 17:06:24,742 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:06:24,743 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:06:45,319 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:07:05,796 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:07:05,796 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:07:29,289 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:07:29,289 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:07:49,773 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:07:49,773 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:09:12,677 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 17:16:54,150 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 17:26:13,187 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 17:32:23,951 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:32:23,951 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:32:25,361 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:32:45,746 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 17:32:45,746 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 17:32:52,305 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:00:36,384 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:00:36,914 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:00:37,440 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:01:01,977 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:01:01,977 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:01:08,111 LogManager.py[line:34] DEBUG WebDriver，error Message: Failed to decode response from marionette
+
+2017-09-19 18:08:22,700 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:08:23,223 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:08:23,752 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:08:48,269 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:08:48,269 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:09:12,585 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2017-09-19 18:09:33,349 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:09:33,349 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:09:55,846 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:09:55,846 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:10:18,328 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:10:18,328 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:10:39,308 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:10:39,308 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:11:00,303 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:11:00,303 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:11:21,288 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:11:21,288 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:11:42,256 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:11:42,257 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:12:03,250 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:12:03,250 LogManager.py[line:34] DEBUG 输入有误
+2017-09-19 18:17:37,555 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:17:37,555 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:17:38,934 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:17:59,342 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:17:59,342 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:18:05,957 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:21:01,142 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:21:01,142 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:21:02,476 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:21:22,845 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:21:22,845 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:21:29,539 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:26:00,803 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:26:00,803 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:26:02,171 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:26:22,553 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:26:22,553 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:26:29,309 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:32:58,315 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:32:58,315 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:32:59,693 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:33:20,091 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:33:20,092 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:33:26,634 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:43:51,510 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:43:51,512 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:43:52,875 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:44:13,270 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:44:13,270 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:44:19,875 LogManager.py[line:34] DEBUG 查询数据错误
+2017-09-19 18:52:13,905 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:52:13,907 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:54:30,408 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:54:30,410 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:54:31,773 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:54:52,131 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:54:52,131 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:57:09,207 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 18:57:09,207 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 18:57:10,582 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 19:10:35,559 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 19:10:35,559 LogManager.py[line:34] DEBUG 获取element失败
+2017-09-19 19:15:10,158 LogManager.py[line:34] DEBUG Message: 
+
+2017-09-19 19:15:10,160 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:05:30,313 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:05:30,348 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:05:52,009 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:05:52,009 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:05:56,016 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-26 15:06:16,723 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:06:16,724 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:06:39,191 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:06:39,191 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:07:00,167 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:07:00,167 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:07:21,253 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:07:21,253 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:07:44,019 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 15:08:06,618 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 15:08:16,789 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 15:08:37,130 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:08:37,131 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:08:59,421 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:08:59,421 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:09:19,719 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:09:19,719 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:09:41,013 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:09:41,015 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:10:01,816 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:10:01,816 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:10:22,628 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:10:22,628 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:10:43,427 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:10:43,427 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:11:05,727 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:11:05,727 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:11:26,023 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:11:26,023 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:11:46,831 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:11:46,832 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:12:07,617 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:12:07,618 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:12:28,401 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:12:28,403 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 15:12:48,694 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:12:48,696 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:13:08,989 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 15:13:08,989 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 15:13:10,997 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-26 17:03:15,917 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:03:15,918 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:03:37,440 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:03:37,440 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:03:41,440 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-26 17:04:02,002 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:04:02,002 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:04:24,476 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:04:24,476 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:04:45,456 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:04:45,456 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:05:06,411 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:05:06,411 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:05:30,648 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:05:40,805 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:06:01,125 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:06:01,125 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:06:23,395 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:06:23,397 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:06:43,664 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:06:43,665 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:07:05,118 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:07:05,118 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:07:25,888 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:07:25,888 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:07:46,661 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:07:46,661 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:08:07,431 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:08:07,431 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:08:29,723 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:08:29,723 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:08:49,999 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:08:50,000 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:09:10,822 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:09:10,822 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:09:31,607 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:09:31,607 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:09:52,378 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:09:52,378 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:10:12,667 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:10:12,667 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:10:33,006 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:10:33,006 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:10:35,006 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-26 17:15:55,447 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:15:55,447 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:16:16,973 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:16:16,973 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:16:20,976 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-26 17:16:41,486 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:16:41,486 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:17:03,960 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:17:03,961 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:17:24,940 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:17:24,941 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:17:45,915 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:17:45,915 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:18:10,158 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:18:20,319 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:18:40,661 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:18:40,661 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:19:02,947 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:19:02,947 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:19:23,220 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:19:23,220 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:19:44,492 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:19:44,492 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:20:05,256 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:20:05,256 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:20:26,049 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:20:26,049 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:20:46,822 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:20:46,823 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:21:09,108 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:21:09,109 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:21:29,378 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:21:29,378 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:21:50,144 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:21:50,144 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:22:10,924 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:22:10,926 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:22:31,730 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:22:31,730 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:22:52,019 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:22:52,019 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:23:12,299 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:23:12,301 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:23:14,302 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-26 17:44:20,505 LogManager.py[line:34] DEBUG 进入ithas come here 首页失败
+2018-02-26 17:44:41,721 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:44:41,721 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:45:03,229 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:45:03,229 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:45:07,230 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-26 17:45:27,619 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:45:27,619 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:45:49,921 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:45:49,921 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:46:10,707 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:46:10,707 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:46:31,493 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:46:31,493 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:46:55,757 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:47:05,920 LogManager.py[line:34] DEBUG WebDriver，error Message: 
+
+2018-02-26 17:47:26,240 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:47:26,240 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:47:48,519 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:47:48,519 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:48:08,789 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:48:08,789 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:48:30,062 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:48:30,062 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:48:50,841 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:48:50,841 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:49:11,608 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:49:11,608 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:49:32,387 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:49:32,387 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:49:54,668 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:49:54,670 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:50:14,999 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:50:14,999 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:50:35,813 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:50:35,813 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:50:56,594 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:50:56,594 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:51:17,375 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:51:17,375 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 17:51:37,694 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:51:37,696 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:51:57,983 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 17:51:57,984 LogManager.py[line:34] DEBUG 获取element失败
+2018-02-26 17:51:59,984 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-26 18:10:13,372 LogManager.py[line:34] DEBUG 进入ithas come here 首页失败
+2018-02-26 18:10:34,440 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:10:34,673 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:10:34,673 LogManager.py[line:34] DEBUG 获取element失败 商铺
+2018-02-26 18:10:55,934 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:10:56,160 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:10:56,160 LogManager.py[line:34] DEBUG 获取element失败 html/body/div[2]/div/a
+2018-02-26 18:11:00,164 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-26 18:11:20,430 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:11:20,651 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:11:20,651 LogManager.py[line:34] DEBUG 获取element失败 login-btn
+2018-02-26 18:11:42,934 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:11:43,154 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:11:43,154 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 18:12:03,946 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:12:04,171 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:12:04,171 LogManager.py[line:34] DEBUG 输入有误
+2018-02-26 18:12:24,957 LogManager.py[line:31] INFO WebDriverError
+2018-02-26 18:12:25,177 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-26 18:12:25,177 LogManager.py[line:34] DEBUG 获取element失败 user-login
+2018-02-26 18:12:38,612 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,95) because another element <div class="input-desc"> obscures it
+
+2018-02-26 18:12:38,612 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:06:09,454 LogManager.py[line:34] DEBUG 进入ithas come here 首页失败
+2018-02-27 11:06:30,302 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:06:30,526 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:06:30,526 LogManager.py[line:34] DEBUG 获取element失败 linktext商铺
+2018-02-27 11:06:51,818 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:06:52,032 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:06:52,033 LogManager.py[line:34] DEBUG 获取element失败 xpathhtml/body/div[2]/div/a
+2018-02-27 11:06:56,039 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-27 11:07:16,311 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:07:16,526 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:07:16,526 LogManager.py[line:34] DEBUG 获取element失败 idlogin-btn
+2018-02-27 11:07:38,780 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:07:38,999 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:07:38,999 LogManager.py[line:34] DEBUG 输入有误idaccounttestone
+2018-02-27 11:07:59,823 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:08:00,065 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:08:00,065 LogManager.py[line:34] DEBUG 输入有误idpassword123456
+2018-02-27 11:08:20,845 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:08:21,066 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:08:21,066 LogManager.py[line:34] DEBUG 获取element失败 iduser-login
+2018-02-27 11:08:34,263 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,62) because another element <span class="contact"> obscures it
+
+2018-02-27 11:08:34,263 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:08:43,891 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-27 11:09:07,144 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:09:07,200 LogManager.py[line:34] DEBUG Message: 
+
+2018-02-27 11:09:07,200 LogManager.py[line:34] DEBUG 元素未被找到
+2018-02-27 11:09:07,200 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-27 11:23:03,885 LogManager.py[line:34] DEBUG 进入ithas come here 首页失败
+2018-02-27 11:23:24,779 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:23:24,999 LogManager.py[line:34] DEBUG webDriverException Message: 
+linktext商铺
+2018-02-27 11:23:24,999 LogManager.py[line:34] DEBUG 获取element失败 linktext商铺
+2018-02-27 11:23:46,273 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:23:46,494 LogManager.py[line:34] DEBUG webDriverException Message: 
+xpathhtml/body/div[2]/div/a
+2018-02-27 11:23:46,496 LogManager.py[line:34] DEBUG 获取element失败 xpathhtml/body/div[2]/div/a
+2018-02-27 11:23:50,502 LogManager.py[line:34] DEBUG 进入首页失败
+2018-02-27 11:24:10,786 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:24:11,003 LogManager.py[line:34] DEBUG webDriverException Message: 
+idlogin-btn
+2018-02-27 11:24:11,003 LogManager.py[line:34] DEBUG 获取element失败 idlogin-btn
+2018-02-27 11:24:33,259 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:24:33,483 LogManager.py[line:34] DEBUG webDriverException Message: 
+idaccount
+2018-02-27 11:24:33,483 LogManager.py[line:34] DEBUG 输入有误idaccounttestone
+2018-02-27 11:24:54,234 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:24:54,450 LogManager.py[line:34] DEBUG webDriverException Message: 
+idpassword
+2018-02-27 11:24:54,451 LogManager.py[line:34] DEBUG 输入有误idpassword123456
+2018-02-27 11:25:15,196 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:25:15,411 LogManager.py[line:34] DEBUG webDriverException Message: 
+iduser-login
+2018-02-27 11:25:15,411 LogManager.py[line:34] DEBUG 获取element失败 iduser-login
+2018-02-27 11:25:28,348 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,62) because another element <span class="contact"> obscures it
+
+2018-02-27 11:25:28,348 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:25:37,982 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-27 11:26:00,917 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:26:00,966 LogManager.py[line:34] DEBUG webDriverException Message: 
+xpath/html/body/div[2]/div[2]/div[4]/div[2]/span[1]
+2018-02-27 11:26:00,966 LogManager.py[line:34] DEBUG 元素未被找到 xpath/html/body/div[2]/div[2]/div[4]/div[2]/span[1]
+2018-02-27 11:26:00,966 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-27 11:33:20,400 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,62) because another element <span class="contact"> obscures it
+
+2018-02-27 11:33:20,400 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:33:30,094 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-27 11:33:33,121 LogManager.py[line:28] ERROR element selected failed xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-27 11:33:33,121 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-27 11:40:01,931 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,62) because another element <span class="contact"> obscures it
+
+2018-02-27 11:40:01,933 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:40:11,628 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-27 11:40:14,832 LogManager.py[line:28] ERROR element selected failed xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-27 11:40:14,832 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-27 11:50:03,891 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,62) because another element <span class="contact"> obscures it
+
+2018-02-27 11:50:03,891 LogManager.py[line:31] INFO WebDriverError
+2018-02-27 11:50:13,588 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-27 11:50:16,644 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 10:12:09,453 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,123) because another element <div class="input-desc"> obscures it
+
+2018-02-28 10:12:09,453 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 10:12:19,493 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 10:12:22,499 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 15:01:47,578 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 15:01:50,921 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 15:05:15,516 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 15:05:39,611 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-28 15:05:59,987 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 15:06:00,079 LogManager.py[line:34] DEBUG webDriverException Message: 
+xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-28 15:06:00,079 LogManager.py[line:34] DEBUG 元素未被找到 xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-28 15:06:00,079 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 15:06:20,338 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 15:06:20,388 LogManager.py[line:34] DEBUG webDriverException Message: 
+idbuy-btn
+2018-02-28 15:06:20,388 LogManager.py[line:34] DEBUG 获取element失败 idbuy-btn
+2018-02-28 15:06:23,938 LogManager.py[line:34] DEBUG 输入有误idaccount18207278423
+2018-02-28 15:06:24,459 LogManager.py[line:34] DEBUG 输入有误idpassword123456
+2018-02-28 15:06:25,167 LogManager.py[line:34] DEBUG 获取element失败 iduser-login
+2018-02-28 15:13:59,641 LogManager.py[line:34] DEBUG WebDriver，error Message: Element <select id="insuranceTime" name="insuranceTime"> is not clickable at point (345.5,81) because another element <span class="contact"> obscures it
+
+2018-02-28 15:13:59,641 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 15:14:09,539 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 15:14:12,644 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 15:50:51,687 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 15:50:55,055 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 15:54:28,017 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 15:54:31,421 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 16:32:57,181 LogManager.py[line:34] DEBUG 输入有误idform-field-attachD:\Testing\Automation\UI_Auto\yunBao_auto\testData\mingdan.xlsx
+2018-02-28 18:36:41,171 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 18:36:44,513 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 18:38:03,174 LogManager.py[line:34] DEBUG WebDriver，error Message: Element is not enabled
+
+2018-02-28 18:38:03,174 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 18:38:07,648 LogManager.py[line:31] INFO come to the buy page 1
+2018-02-28 18:38:09,943 LogManager.py[line:34] DEBUG 页面元素未找到
+2018-02-28 18:38:30,273 LogManager.py[line:31] INFO WebDriverError
+2018-02-28 18:38:30,321 LogManager.py[line:34] DEBUG webDriverException Message: 
+xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-28 18:38:30,321 LogManager.py[line:34] DEBUG 元素未被找到 xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-02-28 18:38:30,321 LogManager.py[line:31] INFO come to the buy page 2
+2018-02-28 18:38:32,697 LogManager.py[line:34] DEBUG 输入有误idaccount18207278423
+2018-02-28 18:38:33,219 LogManager.py[line:34] DEBUG 输入有误idpassword123456
+2018-02-28 18:38:33,742 LogManager.py[line:34] DEBUG 获取element失败 iduser-login
+2018-03-01 10:18:29,552 DEBUG WebDriver，error Message: Element is not enabled
+
+2018-03-01 10:18:29,552 INFO WebDriverError
+2018-03-01 10:18:33,871 INFO come to the buy page 1
+2018-03-01 10:18:36,160 DEBUG 页面元素未找到
+2018-03-01 10:18:56,479 INFO WebDriverError
+2018-03-01 10:18:56,523 DEBUG webDriverException Message: 
+xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-03-01 10:18:56,523 DEBUG 元素未被找到 xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-03-01 10:18:56,523 INFO come to the buy page 2
+2018-03-01 10:18:58,940 DEBUG 输入有误idaccount18207278423
+2018-03-01 10:18:59,457 DEBUG 输入有误idpassword123456
+2018-03-01 10:18:59,979 DEBUG 获取element失败 iduser-login
+2018-03-01 10:42:11,852 DEBUG WebDriver，error Message: Element is not enabled
+
+2018-03-01 10:42:11,854 INFO WebDriverError
+2018-03-01 10:42:16,226 INFO come to the buy page 1
+2018-03-01 10:42:38,937 INFO WebDriverError
+2018-03-01 10:42:38,999 DEBUG webDriverException Message: 
+xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-03-01 10:42:39,000 DEBUG 元素未被找到 xpath//div[@class='button-box']/div[@class='notice']/span[@class='my-check']
+2018-03-01 10:42:39,000 INFO come to the buy page 2
+2018-03-01 10:42:41,490 DEBUG 输入有误idaccount18207278423
+2018-03-01 10:42:42,009 DEBUG 输入有误idpassword123456
+2018-03-01 10:42:42,532 DEBUG 获取element失败 iduser-login

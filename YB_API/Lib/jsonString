@@ -1,0 +1,50 @@
+ython json转字符串的一些细节
+
+      要调PHP那边的接口，php那边一直都校验不过，很是郁闷。没办法，只能让人把发送成功的代码拿过来看，不过是php写的，步骤都是一样：
+
+php端：
+
+　　1. json对象转json字符串.
+
+　　2. 对json字符串base64.
+
+　　3. 加入一些其他变量与2得到的base64进行md5
+
+
+
+php运行成功，但python一直都不过，把php的变量都打印了出来，前后对比了很多次，发现，有两个不同的地方：
+
+1. python里json转字符串，默认的是有indent，即多一个空格的。这点跟php里的json_encode()方法不同，php里没有空格。
+
+2. python如果用dict，转成字符串无法保证字符串顺序，这点导致得到的base64跟php的不同。
+
+就是这两点，才导致python调用接口一直验证不过。
+
+解决：
+
+对于1. 查看json模块的dumps方法源码，发现有个separators参数，设置为 (',', ':') 即可。
+
+对于2. 使用collection模块里的OrderedDict类，可以保证字符串顺序
+
+
+
+代码片段：
+复制代码
+
+from collections import OrderedDict
+
+# 这里要保护json转字符串顺序，不然php那边校验不过
+inner = OrderedDict(
+       [("tab", OrderedDict([("type", "exp"), ("value", 1)]))]
+)
+
+code = OrderedDict(
+       [("user", 23445),
+         ("api", 2364),
+        ("guid", '3f60614f-315d-11e7-b690-f8bc127f78d8'),
+        ("cmds",inner)]
+)
+# 这里就是顺序的字符串
+json.dumps(code, encoding="UTF-8", separators=(',', ':'))
+
+复制代码

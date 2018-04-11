@@ -1,0 +1,52 @@
+2017-07-14 13:53:24,355 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 13:55:06,881 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 14:28:10,676 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 18:28:23,869 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 18:49:34,281 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 18:50:05,914 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 18:50:07,917 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-14 18:50:28,599 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 18:50:50,828 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 18:51:11,527 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 18:51:44,140 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 18:51:44,145 LogManager.py[line:31] DEBUG 进入询价页面失败
+2017-07-14 18:52:46,823 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 19:16:07,217 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:16:38,877 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:16:40,882 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-14 19:17:01,470 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:17:23,730 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 19:17:44,342 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:18:16,939 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:18:16,946 LogManager.py[line:31] DEBUG 进入询价页面失败
+2017-07-14 19:20:35,440 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:21:07,053 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:21:09,058 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-14 19:29:32,241 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:29:33,739 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:29:35,745 LogManager.py[line:31] DEBUG 进入首页失败
+2017-07-14 19:29:56,320 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:29:58,363 LogManager.py[line:31] DEBUG 没有找到对应的元素
+2017-07-14 19:29:58,515 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:30:01,557 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:30:01,562 LogManager.py[line:31] DEBUG 进入询价页面失败
+2017-07-14 19:34:58,163 LogManager.py[line:31] DEBUG Message: 
+
+2017-07-14 19:35:00,168 LogManager.py[line:31] DEBUG 进入首页失败

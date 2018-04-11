@@ -1,0 +1,26 @@
+# -*- coding:utf-8 -*-
+from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+import os
+from Public import operation
+
+def DriverFirefox():
+    driver=webdriver.Firefox()
+    driver.maximize_window()
+    return driver
+
+def Chorme():
+    Chorme_file=operation().read_file('resource', 'chromedriver.exe')
+    driver=webdriver.Chrome(Chorme_file)
+    driver.implicitly_wait(30)
+    driver.maximize_window()
+    return driver
+
+def IE():
+    Chorme_file=operation().read_file('resource', 'IEDriverServer.exe')
+    driver=webdriver.Chrome(Chorme_file)
+    driver.implicitly_wait(30)
+    driver.maximize_window()
+    return driver
+
+

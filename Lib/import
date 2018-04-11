@@ -1,0 +1,1286 @@
+ python引用问题
+
+1. 绝对引用，相对引用(absolute_import and relative import)
+package/__init__.py
+pachage/lala.py
+pachage/sys.py
+
+假设在lala.py中import sys，是引用的当前目录的sys, 还是标准库里的sys？来看一下
+
+lala.py
+
+import sys
+print str(sys)
+
+
+
+sys.py, __init__.py都是空文件即可
+
+看一下执行结果
+
+bogon:package licong$ python -m package.lala
+<module 'package.sys' from 'package/sys.pyc'>
+
+
+
+可以知道，python是按照sys.path的优先级去寻找的模块，如果找到就停止加载，而sys.path排在第一个的就是当前目录，所以这就是所谓的隐式的相对引用。
+
+好在python2.5中我们后提供了一种修改这种行为的方法，来看一下
+
+lala.py修改为
+
+from __future__ import absolute_import
+import sys
+print str(sys)
+
+来看一下结果
+
+bogon:package licong$ python -m package.lala
+<module 'sys' (built-in)>
+
+
+
+区别只是添加了from __future__ import absolute_import这句话
+
+如果我们想用当前目录的sys模块怎么办？可以通过显示的相对引用来解决。
+
+lala.py修改为
+
+from __future__ import absolute_import
+import sys
+from . import sys as haha
+print str(sys)
+print str(haha)
+
+
+
+bogon:package licong$ python -m package.lala
+<module 'sys' (built-in)>
+<module 'package.sys' from 'package/sys.pyc'>
+
+
+
+
+
+总结一下包中的几种引用方法，还是以例子中的文件结构举例
+
+import package.sys 绝对引用
+import package.sys 绝对引用且绑定别名
+from package import sys 可替代的绝对引用
+import sys 隐式的相对引用
+from . import sys 显示的相对引用
+
+2. 循环导入问题
+
+c1.py
+
+from c2 import g
+def x():
+    pass
+
+c2.py
+
+from c1 import x
+def g():
+    pass
+
+
+上面这两个文件执行任何一个文件都会报错，原因拿c1.py举例
+
+1.执行c1,
+2.c1第一行需要引用c2中的g，执行c2
+3.c2第一行引用c1中的x，执行c1
+4.由于c1并没有执行完成，x并不存在
+5.报错
+
+再举一个更好的例子
+
+a.py:
+
+print "a in"
+import sys
+print "b imported: %s" % ("b" in sys.modules, )
+import b
+print "a out"
+
+
+
+
+b.py:
+
+print "b in"
+import a
+print "b out"
+x = 3
+
+
+
+执行a.py
+复制代码
+
+$ python a.py
+a in
+b imported: False
+b in
+a in
+b imported: True
+a out
+b out
+a out
+
+复制代码
+
+
+
+如果在a.py中添加
+print b.x
+
+则会报错
+
+原因是, x只有在b out后才会存在，而a out后就会执行print b.x，而a out 是在b out 之前的。
+
+
+解决方法：
+1 延迟import
+
+c1.py
+
+from c2 import g
+def x():
+    return g()
+print x()
+
+
+
+
+c2.py
+
+def g():
+    return 123
+from c1 import x
+
+
+
+
+
+但是，这样修改的前提是g函数不会依赖c1
+
+2. import到写到函数内部
+
+c1.py
+
+def x():
+    from c2 import g
+    return g()
+print x()
+
+
+
+
+
+c2.py
+
+def g():
+    from c1 import x
+    return 123
+
+
+
+
+
+这样只有函数执行时，才会加载响应模块，但是如果有多个函数依赖其他模块，就需要写多遍，非常蠢。
+
+3. 包
+首先要明确，如果不是在包中，是不该出现相对引用这种情况的。
+如果是在包中，上面这个问题是有解决方法的（因为包是一个整体，包的每个组件单独执行没有任何意义，而非包每个文件是可以独立执行的）
+
+
+假设包结构是
+package/__init__.py
+package/a.py
+package/b.py
+
+解决方案1
+使用import而不要使用from import
+
+a.py
+
+import package.b
+def x():
+    pass
+def haha():
+    print package.b.g()
+
+b.py
+
+import package.a
+def g():
+    return 123
+
+
+可以看到，成功了
+复制代码
+
+>>> import package.a
+>>> package.a
+<module 'package.a' from 'package/a.pyc'>
+>>> package.a.haha()
+123
+>>>
+
+复制代码
+
+
+
+
+解决方案2
+把from import 写到__init__.py中
+__init__.py
+
+from . import a, b
+
+
+
+a.py
+复制代码
+
+import package
+def x():
+    pass
+
+def haha():
+    print package.b.g()
+
+复制代码
+
+
+
+b.py
+
+import package
+def g():
+    return 123
+
+
+
+
+
+
+
+
+
+
+
+Python的两种引入机制
+
+Python 提供了二种引入机制：
+
+    relative import
+    absolute import
+
+relative import
+
+relative import 也叫作相对引入，在Python2.5及之前是默认的引入方法。它的使用方法如下：
+Python
+from .string import a
+from ..string import a
+from ...string import a
+1
+2
+3
+
+from .string import a
+from ..string import a
+from ...string import a
+
+这种引入方式使用一个点号来标识引入类库的精确位置。与linux的相对路径表示相似，一个点表示当前目录，每多一个点号则代表向上一层目录。
+"""
+├── __init__.py
+├── foo.py
+└── main.py
+"""
+# foo.py
+a = 2
+# main.py
+print __name__
+from .foo import a
+print a
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+"""
+├── __init__.py
+├── foo.py
+└── main.py
+"""
+# foo.py
+a = 2
+# main.py
+print __name__
+from .foo import a
+print a
+
+相对引入，那么我们需要知道相对什么来引入。相对引入使用被引入文件的 __name__ 属性来决定该文件在整个包结构的位置。那么如果文件的__name__没有包含任何包的信息，例如 __name__ 被设置为了__main__，则认为其为‘top level script’，而不管该文件的位置，这个时候相对引入就没有引入的参考物。如上面的程序所示，当我们执行 python main.py 时，Python解释器会抛出 ValueError: Attempted relative import in non-package的异常。
+
+为了解决这个问题，PEP 0366 — Main module explicit relative imports提出了一个解决方案。允许用户使用python -m ex2.main的方式,来执行该文件。在这个方案下，引入了一个新的属性__package__。
+liuchang@localhost  ~/Codes/pycon
+$ cat ex2/main.py
+print __name__
+print __package__
+from .foo import a
+print a
+liuchang@localhost  ~/Codes/pycon
+$ python -m ex2.main
+__main__
+ex2
+2
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+liuchang@localhost  ~/Codes/pycon
+$ cat ex2/main.py
+print __name__
+print __package__
+from .foo import a
+print a
+liuchang@localhost  ~/Codes/pycon
+$ python -m ex2.main
+__main__
+ex2
+2
+
+absolute import
+
+absolute import 也叫作完全引入，非常类似于Java的引入进制，在Python2.5被完全实现，但是是需要通过 from __future__ import absolute_import 来打开该引入进制。在Python2.6之后以及Python3，完全引用成为Python的默认的引入机制。它的使用方法如下：
+Python
+from pkg import foo
+from pkg.moduleA import foo
+1
+2
+
+from pkg import foo
+from pkg.moduleA import foo
+
+要注意的是，需要从包目录最顶层目录依次写下，而不能从中间开始。
+
+在使用该引入方式时，我们碰到比较多的问题就是因为位置原因，Python找不到相应的库文件，抛出ImportError的异常。让我们看一个完全引用的例子:
+"""
+ex3
+├── __init__.py
+├── foo.py
+└── main.py
+"""
+# foo.py
+a = 2
+
+# main.py
+print __name__
+print __package__
+from ex2.foo import a
+print a
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+
+"""
+ex3
+├── __init__.py
+├── foo.py
+└── main.py
+"""
+# foo.py
+a = 2
+
+# main.py
+print __name__
+print __package__
+from ex2.foo import a
+print a
+
+我们尝试着去运行main.py文件，Python解释器会抛出ImportError。那么我们如何解决这个问题呢？
+$ python ex3/main.py
+__main__
+None
+Traceback (most recent call last):
+  File "ex3/main.py", line 3, in <module>
+    from ex2.foo import a
+ImportError: No module named ex2.foo
+1
+2
+3
+4
+5
+6
+7
+
+$ python ex3/main.py
+__main__
+None
+Traceback (most recent call last):
+  File "ex3/main.py", line 3, in <module>
+    from ex2.foo import a
+ImportError: No module named ex2.foo
+
+首先，我们也可以使用前文所述的module的方式去运行程序，通过-m参数来告诉解释器 __package__ 属性。如下：
+Python
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ python -m ex3.main
+__main__
+ex3
+2
+1
+2
+3
+4
+5
+
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ python -m ex3.main
+__main__
+ex3
+2
+
+另外，我们还有一个办法可以解决该问题，在描述之前，我们介绍一个关于Python的非常有用的小知识：Python解释器会自动将当前工作目录添加到PYTHONPATH。如下所示，可以看到我们打印出的 sys.path 已经包含了当前工作目录。
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon/ex4
+$ cat main.py
+import sys
+print sys.path
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon/ex4
+$ python main.py
+['/Users/liuchang/Codes/pycon/ex4', '/Library/Python/2.7/site-packages/pip-7.1.0-py2.7.egg', '/Library/Python/2.7/site-packages/mesos-_PACKAGE_VERSION_-py2.7.egg', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages', '/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload', '/Users/liuchang/Library/Python/2.7/lib/python/site-packages', '/usr/local/lib/python2.7/site-packages', '/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC', '/Library/Python/2.7/site-packages']
+1
+2
+3
+4
+5
+6
+7
+
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon/ex4
+$ cat main.py
+import sys
+print sys.path
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon/ex4
+$ python main.py
+['/Users/liuchang/Codes/pycon/ex4', '/Library/Python/2.7/site-packages/pip-7.1.0-py2.7.egg', '/Library/Python/2.7/site-packages/mesos-_PACKAGE_VERSION_-py2.7.egg', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages', '/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload', '/Users/liuchang/Library/Python/2.7/lib/python/site-packages', '/usr/local/lib/python2.7/site-packages', '/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC', '/Library/Python/2.7/site-packages']
+
+了解了Python解释器的这个特性后，我们就可以解决完全引用的找不到类库的问题：执行的时候，让解释器自动的将类库的目录添加到PYTHONPATH中。
+
+我们可以在顶层目录中添加一个run_ex3.py的文件，文件内容和运行结果如下，可以看到Python解释器正确的执行了ex3.main文件。
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ cat run_ex3.py
+from ex3 import main
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ python run_ex3.py
+ex3.main
+None
+2
+1
+2
+3
+4
+5
+6
+7
+8
+
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ cat run_ex3.py
+from ex3 import main
+liuchang@liuchangdeMacBook-Pro  ~/Codes/pycon
+$ python run_ex3.py
+ex3.main
+None
+2
+
+一些实践经验
+相对引用还是绝对引用？
+
+上面介绍了Python的两种引用方式，都可以解决引入歧义的问题。那我们应该使用哪一种呢？
+
+先说明一下Python的默认引用方式，在Python2.4及之前，Python只有相对引用这一种方式，在Python2.5中实现了绝对引用，但默认没有打开，需要用户自己指定使用该引用方式。在之后的版本和Python3版本，绝对引用已经成为默认的引用方式。
+
+其次，二种引用方式各有利弊。绝对引用代码更加清晰明了，可以清楚的看到引入的包名和层次，但是，当包名修改的时候，我们需要手动修改所有的引用代码。相对引用则比较精简，不会被包名修改所影响，但是可读性较差，不如完全引用清晰。
+
+最后，对于两种引用的方式选择，还是有争论的。在PEP8中，Python官方推荐的是绝对引用,详细理由可以参考这儿。
+
+    Absolute imports are recommended, as they are usually more readable and tend to be better behaved (or at least give better error messages) if the import system is incorrectly configured (such as when a directory inside a package ends up on sys.path ):
+    Python
+    import mypkg.sibling
+    from mypkg import sibling
+    from mypkg.sibling import example
+    1
+    2
+    3
+
+    import mypkg.sibling
+    from mypkg import sibling
+    from mypkg.sibling import example
+
+    However, explicit relative imports are an acceptable alternative to absolute imports, especially when dealing with complex package layouts where using absolute imports would be unnecessarily verbose:
+    Python
+    from . import sibling
+    from .sibling import example
+    1
+    2
+
+    from . import sibling
+    from .sibling import example
+
+    Standard library code should avoid complex package layouts and always use absolute imports. Implicit relative imports should never be used and have been removed in Python 3.
+
+规范打包发布
+
+为了别人使用自己代码的方便，应该尽量使用规范的包分发机制。为自己的Python包编写正确的setup.py文件，添加相应的README.md文件。对于提供一些可执行命令的包，则可以使用 console_entrypoint 的机制来提供。因为打包和分发不是本文重点，不再详细叙述，大家可以查看官方文档。
+使用virtualenv管理包依赖
+
+在使用Python的时候，尽量使用virtualenv来管理项目，所有的项目从编写到运行都在特定的virtualenv中。并且为自己的项目生成正确的依赖描述文件。
+pip freeze > requirements.txt
+1
+
+pip freeze > requirements.txt
+
+关于virtualenv的用法，可以参考我之前的一篇文章virtualenv教程。
+Python import实现
+
+Python 提供了 import 语句来实现类库的引用，下面我们详细介绍当执行了 import 语句的时候，内部究竟做了些什么事情。
+
+当我们执行一行  from package import module as mymodule 命令时，Python解释器会查找package这个包的module模块，并将该模块作为mymodule引入到当前的工作空间。所以import语句主要是做了二件事：
+
+    查找相应的module
+    加载module到local namespace
+
+下面我们详细了解python是如何查找模块的。
+查找module的过程
+
+在import的第一个阶段，主要是完成了查找要引入模块的功能，这个查找的过程如下：
+
+    检查 sys.modules (保存了之前import的类库的缓存），如果module被找到，则⾛到第二步。
+    检查 sys.meta_path。meta_path 是一个 list，⾥面保存着一些 finder 对象，如果找到该module的话，就会返回一个finder对象。
+    检查⼀些隐式的finder对象，不同的python实现有不同的隐式finder，但是都会有 sys.path_hooks, sys.path_importer_cache 以及sys.path。
+    抛出 ImportError。
+
+sys.modules
+
+对于第一步中sys.modules，我们可以打开Python来实际的查看一下其内容：
+
+    Python 2.7.10 (default, Aug 22 2015, 20:33:39)
+    [GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.1)] on darwin
+    Type "help", "copyright", "credits" or "license" for more information.
+    >> import sys
+    >> sys.modules
+    {'copy_reg': <module 'copy_reg' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.pyc'>, 'sre_compile': <module 'sre_compile' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_compile.pyc'>, '_sre': <module '_sre' (built-in)>, 'encodings': <module 'encodings' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/__init__.pyc'>, 'site': <module 'site' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.pyc'>, '__builtin__': <module '__builtin__' (built-in)>, 'sysconfig': <module 'sysconfig' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sysconfig.pyc'>, 'encodings.encodings': None, '__main__': <module '__main__' (built-in)>, 'supervisor': <module 'supervisor' (built-in)>, 'abc': <module 'abc' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/abc.pyc'>, 'posixpath': <module 'posixpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc'>, '_weakrefset': <module '_weakrefset' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_weakrefset.pyc'>, 'errno': <module 'errno' (built-in)>, 'encodings.codecs': None, 'sre_constants': <module 'sre_constants' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_constants.pyc'>, 're': <module 're' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.pyc'>, '_abcoll': <module '_abcoll' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.pyc'>, 'types': <module 'types' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.pyc'>, '_codecs': <module '_codecs' (built-in)>, 'encodings.__builtin__': None, '_warnings': <module '_warnings' (built-in)>, 'genericpath': <module 'genericpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.pyc'>, 'stat': <module 'stat' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/stat.pyc'>, 'zipimport': <module 'zipimport' (built-in)>, '_sysconfigdata': <module '_sysconfigdata' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_sysconfigdata.pyc'>, 'mpl_toolkits': <module 'mpl_toolkits' (built-in)>, 'warnings': <module 'warnings' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.pyc'>, 'UserDict': <module 'UserDict' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/UserDict.pyc'>, 'encodings.utf_8': <module 'encodings.utf_8' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.pyc'>, 'sys': <module 'sys' (built-in)>, '_osx_support': <module '_osx_support' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_osx_support.pyc'>, 'codecs': <module 'codecs' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codecs.pyc'>, 'readline': <module 'readline' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/readline.so'>, 'os.path': <module 'posixpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc'>, '_locale': <module '_locale' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_locale.so'>, 'signal': <module 'signal' (built-in)>, 'traceback': <module 'traceback' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.pyc'>, 'linecache': <module 'linecache' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/linecache.pyc'>, 'posix': <module 'posix' (built-in)>, 'encodings.aliases': <module 'encodings.aliases' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/aliases.pyc'>, 'exceptions': <module 'exceptions' (built-in)>, 'sre_parse': <module 'sre_parse' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_parse.pyc'>, 'os': <module 'os' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.pyc'>, '_weakref': <module '_weakref' (built-in)>}
+    >> sys.modules['zlib'].__file__
+    '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/zlib.so'
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+    Python 2.7.10 (default, Aug 22 2015, 20:33:39)
+    [GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.1)] on darwin
+    Type "help", "copyright", "credits" or "license" for more information.
+    >> import sys
+    >> sys.modules
+    {'copy_reg': <module 'copy_reg' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.pyc'>, 'sre_compile': <module 'sre_compile' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_compile.pyc'>, '_sre': <module '_sre' (built-in)>, 'encodings': <module 'encodings' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/__init__.pyc'>, 'site': <module 'site' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.pyc'>, '__builtin__': <module '__builtin__' (built-in)>, 'sysconfig': <module 'sysconfig' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sysconfig.pyc'>, 'encodings.encodings': None, '__main__': <module '__main__' (built-in)>, 'supervisor': <module 'supervisor' (built-in)>, 'abc': <module 'abc' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/abc.pyc'>, 'posixpath': <module 'posixpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc'>, '_weakrefset': <module '_weakrefset' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_weakrefset.pyc'>, 'errno': <module 'errno' (built-in)>, 'encodings.codecs': None, 'sre_constants': <module 'sre_constants' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_constants.pyc'>, 're': <module 're' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.pyc'>, '_abcoll': <module '_abcoll' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.pyc'>, 'types': <module 'types' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.pyc'>, '_codecs': <module '_codecs' (built-in)>, 'encodings.__builtin__': None, '_warnings': <module '_warnings' (built-in)>, 'genericpath': <module 'genericpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.pyc'>, 'stat': <module 'stat' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/stat.pyc'>, 'zipimport': <module 'zipimport' (built-in)>, '_sysconfigdata': <module '_sysconfigdata' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_sysconfigdata.pyc'>, 'mpl_toolkits': <module 'mpl_toolkits' (built-in)>, 'warnings': <module 'warnings' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.pyc'>, 'UserDict': <module 'UserDict' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/UserDict.pyc'>, 'encodings.utf_8': <module 'encodings.utf_8' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.pyc'>, 'sys': <module 'sys' (built-in)>, '_osx_support': <module '_osx_support' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_osx_support.pyc'>, 'codecs': <module 'codecs' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codecs.pyc'>, 'readline': <module 'readline' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/readline.so'>, 'os.path': <module 'posixpath' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc'>, '_locale': <module '_locale' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_locale.so'>, 'signal': <module 'signal' (built-in)>, 'traceback': <module 'traceback' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.pyc'>, 'linecache': <module 'linecache' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/linecache.pyc'>, 'posix': <module 'posix' (built-in)>, 'encodings.aliases': <module 'encodings.aliases' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/aliases.pyc'>, 'exceptions': <module 'exceptions' (built-in)>, 'sre_parse': <module 'sre_parse' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_parse.pyc'>, 'os': <module 'os' from '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.pyc'>, '_weakref': <module '_weakref' (built-in)>}
+    >> sys.modules['zlib'].__file__
+    '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/zlib.so'
+
+可以看到sys.modules已经保存了一些包的信息，由这些信息，我们就可以直接知道要查找的包的位置等信息。
+finder、loader和importer
+
+在上文中，我们提到了sys.meta_path中保证了一些finder对象。在python中，不仅定义了finder的概念，还定义了loader和importor的概念。
+
+    finder的任务是决定自己是否根据名字找到相应的模块，在py2中，finder对象必须实现find_module()方法，在py3中必须要实现find_module()或者find_loader（)方法。如果finder可以查找到模块，则会返回一个loader对象(在py3.4中，修改为返回一个module specs)。
+    loader则是负责加载模块，它必须实现一个load_module()的方法。
+    importer 则指一个对象，实现了finder和loader的方法。因为Python是duck type，只要实现了方法，就可以认为是该类。
+
+sys.meta_path
+
+在Python查找的时候，如果在sys.modules没有查找到，就会依次调用sys.meta_path中的finder对象。默认的情况下，sys.meta_path是一个空列表，并没有任何finder对象。
+Python
+In [6]: sys.meta_path
+Out[6]: []
+1
+2
+
+In [6]: sys.meta_path
+Out[6]: []
+
+我们可以向sys.meta_path中添加一些定义的finder，来实现对Python加载模块的修改。比如下例，我们实现了一个会将每次加载包的信息打印出来的finder。
+Python
+from __future__ import print_function
+import sys
+
+class Watcher(object):
+    @classmethod
+    def find_module(cls, name, path, target=None):
+        print("Importing", name, path, target)
+        return None
+
+sys.meta_path.insert(0, Watcher)
+
+import socket
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+from __future__ import print_function
+import sys
+
+class Watcher(object):
+    @classmethod
+    def find_module(cls, name, path, target=None):
+        print("Importing", name, path, target)
+        return None
+
+sys.meta_path.insert(0, Watcher)
+
+import socket
+
+当我们执行的时候，就可以看到系统加载socket包时所发生的事情。
+
+    Python
+     liuchang@localhost  ~/Codes/pycon/ex5_meta_path
+     $ python finder1.py
+     Importing socket None None
+     Importing _socket None None
+     Importing functools None None
+     Importing _functools None None
+     Importing _ssl None None
+     Importing cStringIO None None
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+
+     liuchang@localhost  ~/Codes/pycon/ex5_meta_path
+     $ python finder1.py
+     Importing socket None None
+     Importing _socket None None
+     Importing functools None None
+     Importing _functools None None
+     Importing _ssl None None
+     Importing cStringIO None None
+
+sys.path hook
+
+Python import的hook分为二类，一类是上一章节已经描述的meta hook，另一类是 path hook。
+
+当处理sys.path（或者package.path)时，就会调用对应的一部分的 Pack hook。Path Hook是通过向sys.path_hooks 中添加一个importer生成器来注册的。
+
+sys.path_hooks 是由可被调用的对象组成，它会顺序的检查以决定他们是否可以处理给定的sys.path的一项。每个对象会使用sys.path项的路径来作为参数被调用。如果它不能处理该路径，就必须抛出ImportError，如果可以，则会返回一个importer对象。之后，不会再尝试其它的sys.path_hooks对象，即使前一个importer出错了。
+
+详细可以参考registering-hooks。
+python import hooks
+
+在介绍完Python的引用机制与一些实现方法后，接下来我们介绍一些关于如何根据自己的需求来扩展Python的引用机制。
+
+在开始详细介绍前，给大家展示一个实用性不高，但是很有意思的例子：让Python在执行代码的时候自动安装缺失的类库。我们会实现一个autoinstall的模块，只要import了该模块，就可以打开该功能。如下所示，我们尝试引入tornado库的时候，iPython会提示我们没有安装。然后，我们引入了autoinstall，再尝试引入tornado，iPython就会自动的安装tornado库。
+Python
+In [1]: import tornado
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-1-3eac10687b7e> in <module>()
+----> 1 import tornado
+
+ImportError: No module named tornado
+
+In [2]: import autoinstall
+
+In [3]: import tornado
+Installing tornado
+
+Collecting tornado
+  Downloading tornado-4.2.1.tar.gz (434kB)
+Collecting backports.ssl-match-hostname (from tornado)
+  Downloading http://182.92.2.186:7002/packages/backports.ssl_match_hostname-3.4.0.2-py2-none-any.whl
+Collecting certifi (from tornado)
+  Downloading certifi-2015.9.6.2-py2.py3-none-any.whl (371kB)
+Installing collected packages: backports.ssl-match-hostname, certifi, tornado
+  Running setup.py install for tornado
+Successfully installed backports.ssl-match-hostname-3.4.0.2 certifi-2015.9.6.2 tornado-4.2.1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+
+In [1]: import tornado
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-1-3eac10687b7e> in <module>()
+----> 1 import tornado
+
+ImportError: No module named tornado
+
+In [2]: import autoinstall
+
+In [3]: import tornado
+Installing tornado
+
+Collecting tornado
+  Downloading tornado-4.2.1.tar.gz (434kB)
+Collecting backports.ssl-match-hostname (from tornado)
+  Downloading http://182.92.2.186:7002/packages/backports.ssl_match_hostname-3.4.0.2-py2-none-any.whl
+Collecting certifi (from tornado)
+  Downloading certifi-2015.9.6.2-py2.py3-none-any.whl (371kB)
+Installing collected packages: backports.ssl-match-hostname, certifi, tornado
+  Running setup.py install for tornado
+Successfully installed backports.ssl-match-hostname-3.4.0.2 certifi-2015.9.6.2 tornado-4.2.1
+
+这个功能的实现其实很简单，利用了sys.meta_path。autoinstall的全部代码如下：
+Python
+from __future__ import print_function
+import sys
+import subprocess
+
+class AutoInstall(object):
+    _loaded = set()
+
+    @classmethod
+    def find_module(cls, name, path, target=None):
+        if path is None and name not in cls._loaded:
+            cls._loaded.add(name)
+            print("Installing", name)
+            try:
+                out = subprocess.check_output(['sudo', sys.executable, '-m', 'pip', 'install', name])
+                print(out)
+            except Exception as e:
+                print("Failed" + e.message)
+        return None
+
+sys.meta_path.append(AutoInstall)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+from __future__ import print_function
+import sys
+import subprocess
+
+class AutoInstall(object):
+    _loaded = set()
+
+    @classmethod
+    def find_module(cls, name, path, target=None):
+        if path is None and name not in cls._loaded:
+            cls._loaded.add(name)
+            print("Installing", name)
+            try:
+                out = subprocess.check_output(['sudo', sys.executable, '-m', 'pip', 'install', name])
+                print(out)
+            except Exception as e:
+                print("Failed" + e.message)
+        return None
+
+sys.meta_path.append(AutoInstall)
+
+import hook的重要性
+
+我们为什么需要Python import的hook呢？使用import的hook可以让我们做到很多事情，比如说当我们的Python包存储在一个非标准的文件中，或者Python程序存储在网络数据库中，或者像py2exe一样将Python程序打包成了一个文件，我们需要一种方法来正确的解析它们。
+
+其次，我们希望在Python加载类库的时候，可以额外的做一些事情，比如上传审计信息，比如延迟加载，比如自动解决上例的依赖未安装的问题。
+
+所以，import系统的Hook技术是值的花时间学习的。
+如何实现import hooks
+
+Python提供了一些方法，让我们可以在代码中动态的调用import。主要有如下几种：
+
+    __import__ : Python的内置函数
+    imputil : Python的import工具库，在py2.6被声明废弃，py3中彻底移除。
+    imp : Python2 的一个import库，py3中移除
+    importlib : Python3 中最新添加，backport到py2.7，但只有很小的子集（只有一个函数）。
+
+Python2 所有关于import的库的列表参见Importing Modules。Python3 的可以参考Importing Modules PEP 0302 — New Import Hooks 提案详细的描述了importlib的目的、用法。
+一些Hook示例
+Lazy化库引入
+
+使用Import Hook，我们可以达到Lazy Import的效果，当我们执行import的时候，实际上并没引入该库，只有真正的使用这个库的时候，才会将其引入到当前工作空间。 具体的代码可以参考github。 实现的效果如下：
+Python
+#!/usr/bin/python
+
+import limp  # Lazy imports begin now
+
+import json
+import sys
+
+print('json' in sys.modules)  # False
+print(', '.join(json.loads('["Hello", "World!"]')))
+print('json' in sys.modules)  # True
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+#!/usr/bin/python
+
+import limp  # Lazy imports begin now
+
+import json
+import sys
+
+print('json' in sys.modules)  # False
+print(', '.join(json.loads('["Hello", "World!"]')))
+print('json' in sys.modules)  # True
+
+它的实现也很简单：
+Python
+import sys
+import imp
+
+_lazy_modules = {}
+
+class LazyModule():
+    def __init__(self, name):
+        self.name = name
+
+    def __getattr__(self, attr):
+        path = _lazy_modules[self.name]
+        f, pathname, desc = imp.find_module(self.name, path)
+
+        lf = sys.meta_path.pop()
+        imp.load_module(self.name, f, pathname, desc)
+        sys.meta_path.append(lf)
+
+        self.__dict__ = sys.modules[self.name].__dict__
+        return self.__dict__[attr]
+
+class LazyFinder(object):
+
+    def find_module(self, name, path):
+        _lazy_modules[name] = path
+        return self
+
+    def load_module(self, name):
+        return LazyModule(name)
+
+sys.meta_path.append(LazyFinder())
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+
+import sys
+import imp
+
+_lazy_modules = {}
+
+class LazyModule():
+    def __init__(self, name):
+        self.name = name
+
+    def __getattr__(self, attr):
+        path = _lazy_modules[self.name]
+        f, pathname, desc = imp.find_module(self.name, path)
+
+        lf = sys.meta_path.pop()
+        imp.load_module(self.name, f, pathname, desc)
+        sys.meta_path.append(lf)
+
+        self.__dict__ = sys.modules[self.name].__dict__
+        return self.__dict__[attr]
+
+class LazyFinder(object):
+
+    def find_module(self, name, path):
+        _lazy_modules[name] = path
+        return self
+
+    def load_module(self, name):
+        return LazyModule(name)
+
+sys.meta_path.append(LazyFinder())
+
+Flask 插件库统一入口
+
+使用过Flask的同学都知道，Flask的对于插件提供了统一的入口。比如说我们安装了Flask_API这个库，然后我们可以直接 import flask_api 来使用这个库，同时Flask还允许我们采用 import flask.ext.api 的方式来引用该库。
+
+这里Flask就是使用了import 的hook，当引入flask.ext的包时，就自动的引用相应的库。Flask实现了一个叫ExtensionImporter的类，这个类实现了find_module和load_module代码实现如下github：
+Python
+class ExtensionImporter(object):
+    """This importer redirects imports from this submodule to other locations.
+    This makes it possible to transition from the old flaskext.name to the
+    newer flask_name without people having a hard time.
+    """
+
+    def __init__(self, module_choices, wrapper_module):
+        self.module_choices = module_choices
+        self.wrapper_module = wrapper_module
+        self.prefix = wrapper_module + '.'
+        self.prefix_cutoff = wrapper_module.count('.') + 1
+
+    def __eq__(self, other):
+        return self.__class__.__module__ == other.__class__.__module__ and \
+               self.__class__.__name__ == other.__class__.__name__ and \
+               self.wrapper_module == other.wrapper_module and \
+               self.module_choices == other.module_choices
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def install(self):
+        sys.meta_path[:] = [x for x in sys.meta_path if self != x] + [self]
+
+    def find_module(self, fullname, path=None):
+        if fullname.startswith(self.prefix):
+            return self
+
+    def load_module(self, fullname):
+        if fullname in sys.modules:
+            return sys.modules[fullname]
+        modname = fullname.split('.', self.prefix_cutoff)[self.prefix_cutoff]
+        for path in self.module_choices:
+            realname = path % modname
+            try:
+                __import__(realname)
+            except ImportError:
+                exc_type, exc_value, tb = sys.exc_info()
+                # since we only establish the entry in sys.modules at the
+                # very this seems to be redundant, but if recursive imports
+                # happen we will call into the move import a second time.
+                # On the second invocation we still don't have an entry for
+                # fullname in sys.modules, but we will end up with the same
+                # fake module name and that import will succeed since this
+                # one already has a temporary entry in the modules dict.
+                # Since this one "succeeded" temporarily that second
+                # invocation now will have created a fullname entry in
+                # sys.modules which we have to kill.
+                sys.modules.pop(fullname, None)
+
+                # If it's an important traceback we reraise it, otherwise
+                # we swallow it and try the next choice.  The skipped frame
+                # is the one from __import__ above which we don't care about
+                if self.is_important_traceback(realname, tb):
+                    reraise(exc_type, exc_value, tb.tb_next)
+                continue
+            module = sys.modules[fullname] = sys.modules[realname]
+            if '.' not in modname:
+                setattr(sys.modules[self.wrapper_module], modname, module)
+            return module
+        raise ImportError('No module named %s' % fullname)
+
+
+class ExtensionImporter(object):
+    """This importer redirects imports from this submodule to other locations.
+    This makes it possible to transition from the old flaskext.name to the
+    newer flask_name without people having a hard time.
+    """
+
+    def __init__(self, module_choices, wrapper_module):
+        self.module_choices = module_choices
+        self.wrapper_module = wrapper_module
+        self.prefix = wrapper_module + '.'
+        self.prefix_cutoff = wrapper_module.count('.') + 1
+
+    def __eq__(self, other):
+        return self.__class__.__module__ == other.__class__.__module__ and \
+               self.__class__.__name__ == other.__class__.__name__ and \
+               self.wrapper_module == other.wrapper_module and \
+               self.module_choices == other.module_choices
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def install(self):
+        sys.meta_path[:] = [x for x in sys.meta_path if self != x] + [self]
+
+    def find_module(self, fullname, path=None):
+        if fullname.startswith(self.prefix):
+            return self
+
+    def load_module(self, fullname):
+        if fullname in sys.modules:
+            return sys.modules[fullname]
+        modname = fullname.split('.', self.prefix_cutoff)[self.prefix_cutoff]
+        for path in self.module_choices:
+            realname = path % modname
+            try:
+                __import__(realname)
+            except ImportError:
+                exc_type, exc_value, tb = sys.exc_info()
+                # since we only establish the entry in sys.modules at the
+                # very this seems to be redundant, but if recursive imports
+                # happen we will call into the move import a second time.
+                # On the second invocation we still don't have an entry for
+                # fullname in sys.modules, but we will end up with the same
+                # fake module name and that import will succeed since this
+                # one already has a temporary entry in the modules dict.
+                # Since this one "succeeded" temporarily that second
+                # invocation now will have created a fullname entry in
+                # sys.modules which we have to kill.
+                sys.modules.pop(fullname, None)
+
+                # If it's an important traceback we reraise it, otherwise
+                # we swallow it and try the next choice.  The skipped frame
+                # is the one from __import__ above which we don't care about
+                if self.is_important_traceback(realname, tb):
+                    reraise(exc_type, exc_value, tb.tb_next)
+                continue
+            module = sys.modules[fullname] = sys.modules[realname]
+            if '.' not in modname:
+                setattr(sys.modules[self.wrapper_module], modname, module)
+            return module
+        raise ImportError('No module named %s' % fullname)
+
+然后在Flask的ext目录下的__init__.py文件中，初始化了该Importer。
+Python
+def setup():
+    from ..exthook import ExtensionImporter
+    importer = ExtensionImporter(['flask_%s', 'flaskext.%s'], __name__)
+    importer.install()
+1
+2
+3
+4
+
+def setup():
+    from ..exthook import ExtensionImporter
+    importer = ExtensionImporter(['flask_%s', 'flaskext.%s'], __name__)
+    importer.install()
+
+总结
+
+
+
+ython】import问题总结
+
+首先是绝对引用
+
+首先总结一下import的各种姿势：
+
+1、import package 读这个包的__init__.py
+
+2、import module 读这个模块全部内容
+
+3、import package1.package2.package3.module4 读package1, package2, package3的__init__.py， 以及这个模块全部内容（顺序）
+
+4、import package1.package2 读package1, package2的__init__.py（顺序）
+
+这些是import中发生的事情。情况1、2没什么好说的，直接用package.或者module.就可以了。
+
+
+
+情况3中，假设package1下有package2， package22, package222三个包，还有一个module2222模块，你想访问除了package2之外的其他东西，如果在所有的__init__.py中没有引用他们，那么调用是会出错的。
+
+在情况3中，sys.modules会加入以下的模块
+
+'package1'
+
+'package1.package2'
+
+'package1.package2.package3'
+'package1.package2.package3.module4'
+
+你尝试着看package1，或者调用package1.abc (abc在__init__中定义)，这是可以成功的。
+
+
+
+接着上面情况3的例子，现在你用
+
+from package1.package2.package3 import module4
+
+sys.modules与上述并没有什么不同
+
+但是！神奇的地方来了！package1和package1.abc解释器并不认识！
+
+原因是什么呢？猜测系统的逻辑如下：
+
+import 1.2.3.4 那么你可能会用到1, 1.2, 1.2.3, 1.2.3.4, 系统默认都记下来
+
+from 1.2.3 import 4，那么看起来你只会用到4， 那么1干脆就忘掉算了。。。
+
+
+
+import x1.x2报错找不到？
+
+每次Import x1.xxx的时候，都是要读x1.__init__.py的，如果没有该文件，那么就无法导入啦。
+
+所以，如果第一层是个文件夹，一定要保证这个文件夹中有__init__.py文件！否则既不能import x1.x2， 也不能from x1 import x2。总之你就是无法够到x2，除非把x1加入到python环境变量PYTHONPATH中。
+
+
+
+相对引用是怎么实现的呢？
+
+首先，从点和两点开始的引用，都是相对引用。
+
+相对引用不能够在最里层调用，否则会报错 ValueError: Attempted relative import beyond toplevel package
+
+相对引用好像不能直接跑，否则会报错 ValueError: Attempted relative import in non-package
+
+stackoverflow中有解释：relative import依赖文件__name__，而如果跑那个脚本的话，文件名字就成了__main__，这样__package__会被设为None，而相对引用依赖__package__的值，就找不到相对引用的位置了，会报Non-package的错误，在命令行中可以用-m跑，意思是把它当作一个模块。
+分类: python
+
+
+ain.py的代码：
+
+#! /usr/bin/env python
+# encoding:utf-8
+
+from A import call_a
+def main():
+    call_a()
+if __name__ == '__main__':
+    main()
+
+A.py文件的代码：
+
+#! /usr/bin/env python
+# encoding:utf-8
+from B import call_b
+
+def call_a():
+	print "call_a"
+	call_b()
+
+B.py文件代码：
+
+#! /usr/bin/env python
+# encoding:utf-8
+def call_b():
+    print "Call_b"
+
+当我通过bash命令运行脚本:
+
+bogon:tests nooper$ python innermodules/main.py
+Traceback (most recent call last):
+  File "innermodules/main.py", line 4, in <module>
+    from A import call_a
+ImportError: No module named A
+bogon:tests nooper$
+
+是不能识别模块的加载路径，但是能通过IDE-pycharm运行。如何通过shell来执行脚本main.py，还是需要对__init__.py文件进行加载包。
+
+可以直接通过pycharm来修改import的路径，具体pycharm版本不一样，对应按钮位置不一样，因此仅以文字说明。
+
+file->Settings(Ctrl+Shift+s)->Project Setting->Project Interpreter->选择你的python版本->Interpreter Path->添加
+
+你这里的话添加如下目录即可
+**\tests
+即project的根目录。
+
+如果你在tests下有文件夹test2，其下有文件c.py。要引用c文件的c2
+在你的main.py里面加入:
+from test2.c import c2
+路径是以你添加的路径的相对路径。。。
+
+A.py 和 main.py 没有在同一个文件夹下
+可以把A.py和main.py 放到同一个文件夹下 或者把A.py 加入import 路径
+或者 from ..A import call_a
+
+import sys
+sys.path.append('..')
+
+将父目录加入import路径
