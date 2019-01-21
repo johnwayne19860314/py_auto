@@ -12,7 +12,7 @@ global driver
 # os.chdir(r'D:/Testing/Automation/UI_Auto')
 # print os.getcwd()
 
-sys.path.insert(0, r'D:/Testing/Automation/UI_Auto')
+#sys.path.insert(0, r'D:/Testing/Automation/UI_Auto')
 print sys.path
 #from ..Public import operation
 #import yunBao_auto.Public.operation as operate
