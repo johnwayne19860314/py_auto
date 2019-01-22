@@ -1,0 +1,28 @@
+# python Automation测试基础模块
+ to be modified
+
+## QuickStarts
+
+1. 安装模块
+
+
+
+2. 使用模块里的功能
+
+```
+移动端自动化 Appium
+PC端自动化  YunBao_auto
+
+API自动化  YB_API
+
+
+```
+## AirWallet 项目在YB_API/testcase_AirWallet 以payment_method bank_country_code account_name account_number swift_code bsb aba 做排列组合 
+
+## Release Notes
+
+**版本号建议使用a.b.c规则，小修复增加c，有特性增加使用b，有大调整使用a**
+
+
+
+`0.0.1` 基础模块引入
