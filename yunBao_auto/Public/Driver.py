@@ -6,15 +6,15 @@ import os,sys
 #Chorme_file = os.path.join(sys.path[1], 'resource', 'chromedriver.exe')
 #print Chorme_file
 def DriverFirefox():
-   # driver=webdriver.Firefox()
+    driver=webdriver.Firefox()
    #//C:\Users\Anyi-tech\AppData\Roaming\Mozilla\Firefox\Profiles\kj93kq6l.default
     #配置文件地址
-    profile_directory = r'C:\Users\Anyi-tech\AppData\Roaming\Mozilla\Firefox\Profiles\lwteu6fo.firefox51'
-    #profile_directory = r'C:\Users\Anyi-tech\AppData\Roaming\Mozilla\Firefox\Profiles\tfr7iv91.john'
-    # 加载配置配置
-    profile = webdriver.FirefoxProfile(profile_directory)
-    # 启动浏览器配置
-    driver = webdriver.Firefox(profile)
+    # profile_directory = r'C:\Users\Anyi-tech\AppData\Roaming\Mozilla\Firefox\Profiles\lwteu6fo.firefox51'
+    # #profile_directory = r'C:\Users\Anyi-tech\AppData\Roaming\Mozilla\Firefox\Profiles\tfr7iv91.john'
+    # # 加载配置配置
+    # profile = webdriver.FirefoxProfile(profile_directory)
+    # # 启动浏览器配置
+    # driver = webdriver.Firefox(profile)
 
     # binary = FirefoxBinary(r'D:\Tools\Firefox51')
     # driver = webdriver.Firefox(firefox_binary=binary)

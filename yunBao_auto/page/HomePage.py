@@ -8,7 +8,7 @@ class BrowserDriver():
     def __init__(self):
         global driver
         self.driver = Driver.DriverFirefox()
-        self.driver.get("http://test.spb.riskeys.com")
+        self.driver.get("http://open.anyitech.ltd")
         driver = self.driver
         time.sleep(1)
         # 判断是否是首页内容
